@@ -1,4 +1,4 @@
-The goal here is to basically build your TXT files into BINs and the build your Patch_D2.mpq from that without ever having to launch the game.
+The goal here is to basically build your TXT files into BINs and then build your Patch_D2.mpq from that without ever having to launch the game.
 
 Step 1, works.
 
