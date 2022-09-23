@@ -1,0 +1,8 @@
+{
+  "$comment": "takes a data folder and make a Patch_D2.mpq.",
+  "name": "data2mpq",
+  "version-string": "0.0.1",
+  "dependencies": [
+    "stormlib"
+  ]
+}

@@ -19,4 +19,16 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="vcpkg.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\StormLibDAS.lib" />
+    <Library Include="lib\StormLibDUD.lib" />
+    <Library Include="lib\StormLibDUS.lib" />
+    <Library Include="lib\StormLibRAD.lib" />
+    <Library Include="lib\StormLibRAS.lib" />
+    <Library Include="lib\StormLibRUD.lib" />
+    <Library Include="lib\StormLibRUS.lib" />
+  </ItemGroup>
 </Project>

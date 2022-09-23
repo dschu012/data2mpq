@@ -2,6 +2,9 @@
 #include <filesystem>
 #include <iostream>
 #include <cstdint>
+#include <format>
+#include <string>
+#include <StormLib.h>
 
 #ifndef VERSION
 #define VERSION '113c'
@@ -167,9 +170,35 @@ int main()
 #pragma endregion
 #pragma region Write BINs + Other Files into Patch_D2.mpq
 
+    /*
+    HANDLE hMpq = NULL;          // Open archive handle
+    HANDLE hFile = NULL;          // Archived file handle
+    HANDLE handle = NULL;          // Disk file handle
+    
+    std::filesystem::remove_all(L"data2mpq_output");
+    std::filesystem::create_directories(L"data2mpq_output");
+    std::filesystem::copy(L"./Patch_D2.mpq", L"./data2mpq_output/Patch_D2.mpq");
+
+    SFileOpenArchive(L"./data2mpq_output/Patch_D2.mpq", 0, MPQ_OPEN_PATCH, &hMpq);
+
+    for (const auto& entry : std::filesystem::recursive_directory_iterator(L"data")) {
+        if (entry.is_regular_file()) {
+            auto path = entry.path().string();
+            auto wpath = entry.path().wstring();
+            printf(std::format("Writing {}\n", path).c_str());
+            SFileAddFileEx(hMpq, wpath.c_str(), path.c_str(),
+                MPQ_FILE_REPLACEEXISTING | MPQ_FILE_COMPRESS | MPQ_FILE_SINGLE_UNIT,
+                MPQ_COMPRESSION_ZLIB,
+                MPQ_COMPRESSION_NEXT_SAME);
+        }
+    }
+
+    SFileCloseArchive(hMpq);
+    */
+
 #pragma endregion
 
-    std::cout << "Hello World!\n";
+    printf("Finished\n");
 }
 
 
